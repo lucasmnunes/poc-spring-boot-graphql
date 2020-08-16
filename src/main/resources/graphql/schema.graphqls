@@ -1,0 +1,13 @@
+schema {
+    query: Query
+}
+
+type Player {
+    id: ID
+    name: String
+    jerseyNumber: Int
+}
+
+type Query {
+    retrieveAllPlayers: [Player]
+}
