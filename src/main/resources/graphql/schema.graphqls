@@ -1,13 +1,17 @@
-schema {
-    query: Query
-}
+#schema {
+#    query: Query
+#}
 
 type Player {
-    id: ID
+    id: ID!
     name: String
+    country: String
+    position: String
     jerseyNumber: Int
 }
 
 type Query {
     retrieveAllPlayers: [Player]
+#    retrievePlayerById(playerId: Int): Player
+#    retrievePlayerByJerseyNumber(jerseyNumber: Int): Player
 }
