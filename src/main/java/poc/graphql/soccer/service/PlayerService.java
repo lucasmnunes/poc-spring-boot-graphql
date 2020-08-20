@@ -23,12 +23,12 @@ public class PlayerService implements GraphQLQueryResolver {
         return repository.findAll();
     }
 
-//    public Player retrievePlayerById(int playerId){
-//        return repository.findById(playerId).orElse(null);
-//    }
-//
-//    public Player retrievePlayerByJerseyNumber(int jerseyNumber){
-//        return repository.findByJerseyNumber(jerseyNumber);
-//    }
+    public Player retrievePlayerById(int playerId){
+        return repository.findById(playerId).orElse(null);
+    }
+
+    public Player retrievePlayerByJerseyNumber(int jerseyNumber){
+        return repository.findByJerseyNumber(jerseyNumber).orElse(null);
+    }
 
 }

@@ -12,6 +12,6 @@ type Player {
 
 type Query {
     retrieveAllPlayers: [Player]
-#    retrievePlayerById(playerId: Int): Player
-#    retrievePlayerByJerseyNumber(jerseyNumber: Int): Player
+    retrievePlayerById(playerId: Int): Player
+    retrievePlayerByJerseyNumber(jerseyNumber: Int): Player
 }
