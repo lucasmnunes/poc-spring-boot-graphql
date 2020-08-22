@@ -1,6 +1,7 @@
-#schema {
-#    query: Query
-#}
+schema {
+    query: Query
+#    mutation: Mutation
+}
 
 type Player {
     id: ID!
@@ -14,4 +15,16 @@ type Query {
     retrieveAllPlayers: [Player]
     retrievePlayerById(playerId: Int): Player
     retrievePlayerByJerseyNumber(jerseyNumber: Int): Player
+}
+
+#type Mutation {
+#    updatePlayerById(inputPlayer: PlayerInput) : Player
+#}
+
+input PlayerInput {
+    id: Int
+    name: String
+    county: String
+    position: String
+    jerseyNumber: Int
 }
