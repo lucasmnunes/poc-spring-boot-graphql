@@ -17,6 +17,8 @@ After doing the above steps:
 ##### Queries
 After Spring Boot application is running:
 
+- Query approach:
+
 ```
 query {
 
@@ -33,6 +35,27 @@ query {
 	retrievePlayerByJerseyNumber(jerseyNumber: 10) { 
 		name
 	}
+
+}
+```
+
+- Mutation approach:
+
+```
+mutation {
+    
+    updatePlayerJerseyById (
+        inputPlayer: { 
+            id: 8
+            jerseyNumber: 11 
+        }) 
+    { 
+        id
+        name
+        jerseyNumber
+        position
+        country 
+    }
 
 }
 ```

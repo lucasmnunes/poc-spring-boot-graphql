@@ -10,13 +10,11 @@ import java.util.List;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
 @Service
-public class PlayerService implements GraphQLQueryResolver {
-
-    private PlayerRepository repository;
+public class PlayerService extends PlayerAbstractService implements GraphQLQueryResolver {
 
     @Autowired
     PlayerService(PlayerRepository repository) {
-        this.repository = repository;
+        super(repository);
     }
 
     public List<Player> retrieveAllPlayers() {

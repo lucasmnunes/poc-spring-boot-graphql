@@ -1,6 +1,6 @@
 schema {
     query: Query
-#    mutation: Mutation
+    mutation: Mutation
 }
 
 type Player {
@@ -17,9 +17,9 @@ type Query {
     retrievePlayerByJerseyNumber(jerseyNumber: Int): Player
 }
 
-#type Mutation {
-#    updatePlayerById(inputPlayer: PlayerInput) : Player
-#}
+type Mutation {
+    updatePlayerJerseyById(inputPlayer: PlayerInput) : Player
+}
 
 input PlayerInput {
     id: Int
