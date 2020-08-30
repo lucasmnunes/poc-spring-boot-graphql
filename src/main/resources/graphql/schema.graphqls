@@ -9,6 +9,7 @@ type Player {
     country: String
     position: String
     jerseyNumber: Int
+    birth: String
 }
 
 type Query {
