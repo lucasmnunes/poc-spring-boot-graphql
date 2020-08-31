@@ -6,16 +6,23 @@ schema {
 type Player {
     id: ID!
     name: String
-    country: String
+    country: Country
     position: String
     jerseyNumber: Int
     birth: String
+}
+
+type Country {
+    id: ID!
+    name: String
+    continent: String
 }
 
 type Query {
     retrieveAllPlayers: [Player]
     retrievePlayerById(playerId: Int): Player
     retrievePlayerByJerseyNumber(jerseyNumber: Int): Player
+    retrieveAllCountries: [Country]
 }
 
 type Mutation {
